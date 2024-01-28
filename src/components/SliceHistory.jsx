@@ -12,7 +12,7 @@ const SliceHistory = () => {
 				addStylesInfo={`lg:text-sm w-[50%] xl:w-[75%] ${styles.infoSection}`}
 				btnTitle={`Learn More`}
 				btnIcon={<FaArrowRight />}
-				type='btn-not-bg'
+				variant='btn-not-bg'
 			/>
 			<img
 				src='https://shinobi-crypto.vercel.app/static/media/bg-img.faa7accb366050d20bce.png'

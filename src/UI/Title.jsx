@@ -1,7 +1,7 @@
 import { Button } from "./Button"
 
 export const Title = ({
-	type,
+	variant,
 	title,
 	info,
 	btnTitle,
@@ -18,7 +18,7 @@ export const Title = ({
 				className={`text-[#898CA9] text-base font-[800] mt-4 ${addStylesInfo}`}>
 				{info}
 			</p>
-			<Button type={type} styles='px-12 py-4 mt-8 sm:mt-4'>
+			<Button variant={variant} styles='px-12 py-4 mt-8 sm:mt-4'>
 				{btnTitle} {btnIcon}
 			</Button>
 		</div>

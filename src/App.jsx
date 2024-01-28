@@ -1,15 +1,14 @@
-import Footer from "./components/Footer/Footer"
-import Navbar from "./components/Navbar"
+import { Route, Routes } from "react-router-dom"
 import Home from "./pages/Home/Home"
+import Login from "./pages/Login/Login"
 
 const App = () => {
 	return (
 		<>
-			<div className='w-[1440px] mx-auto xl2:w-full'>
-				<Navbar />
-				<Home />
-			</div>
-			<Footer />
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/login' element={<Login />} />
+			</Routes>
 		</>
 	)
 }

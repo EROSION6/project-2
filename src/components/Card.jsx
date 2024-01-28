@@ -16,7 +16,7 @@ const Card = ({ title, imageUrl }) => {
 			</div>
 			<footer className='mt-8'>
 				<Button
-					type='btn-not-bg'
+					variant='btn-not-bg'
 					className='text-[#B982FF] text-base font-[600] flex items-center gap-1'>
 					Get Started{" "}
 					<FaArrowRight className='text-[#B982FF]' />

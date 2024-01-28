@@ -8,15 +8,11 @@ const SectionInfo1 = () => {
 	return (
 		<section className='relative'>
 			<div className='w-full h-screen relative flex justify-center flex-col items-center gap-10 md:justify-center md:h-[40vh]'>
-				<img
-					src={star2}
-					alt='star'
-					className='absolute left-0'
-				/>
+				<img src={star2} alt='star' className='absolute left-0' />
 				<Title
 					title='We make crypto clear and simple'
 					addStylesTitle={`font-[900] text-8xl xl:text-6xl text-center w-[90%] ${styles.title}`}
-					type='btn-bg'
+					variant='btn-bg'
 					btnTitle='Get Started'
 				/>
 			</div>

@@ -13,7 +13,7 @@ const SecureContainer = () => {
 			<img
 				src={star2}
 				alt='star'
-				className='absolute bottom-0 right-[10rem] cursor-pointer hover:rotate-180 duration-500 ease-in-out z-50'
+				className='absolute bottom-0 right-[10rem] cursor-pointer hover:rotate-180 duration-500 ease-in-out z-20'
 			/>
 			<div className='w-[580px] sm:w-full'>
 				<h2 className='text-5xl text-white font-[900] smx:text-2xl'>
@@ -24,7 +24,7 @@ const SecureContainer = () => {
 					eiusmod tempos Lorem ipsum dolor sit amet, consectetur adipiscing
 					elit, sed do eiusmod tempos
 				</p>
-				<Button styles='mt-6' type='btn-bg'>
+				<Button styles='mt-6' variant='btn-bg'>
 					Get Started
 				</Button>
 			</div>

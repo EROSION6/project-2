@@ -26,7 +26,7 @@ const Platform = () => {
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 						eiusmod tempos Lorem ipsum dolor sit amet, consectetur
 					</p>
-					<Button styles='mt-6' type='btn-border'>
+					<Button styles='mt-6' variant='btn-border'>
 						Get Started
 					</Button>
 				</div>
