@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+	.title {
+		font-size: 2.5rem !important;
+	}
+	.titleSection {
+		width: 100% !important;
+		font-size: 2.5rem !important;
+	}
+	.infoSection {
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 420px) {
+	.title {
+		font-size: 1.5rem !important;
+	}
+	.titleSection {
+		font-size: 1.5rem !important;
+	}
+}
