@@ -4,11 +4,11 @@ import star from "../assets/star-img.svg"
 const Platform = () => {
 	return (
 		<>
-			<article className='w-full flex gap-5 mt-40 h-full justify-center px-6 relative z-20 md:flex-col'>
+			<article className='w-full flex gap-5 mt-40 h-full justify-center px-6 relative z-10 md:flex-col'>
 				<img
 					src={star}
 					alt='star'
-					className='absolute top-0 left-0 hover:rotate-180 duration-500 ease-in-out z-50'
+					className='absolute top-0 left-0 hover:rotate-180 duration-500 ease-in-out z-10'
 				/>
 				<div className='w-[420px] h-[335px] relative md:flex justify-center md:w-full items-center'>
 					<div className='w-44 h-40 mt-40 ml-[-30px] rounded-full bg-gradient-to-r from-[#F3DD16] from-11% via-[#BD391C] via-60% to-[#511] 30% md:ml-[-100px]'></div>

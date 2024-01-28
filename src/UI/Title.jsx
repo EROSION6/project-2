@@ -10,7 +10,7 @@ export const Title = ({
 	btnIcon,
 }) => {
 	return (
-		<div className='flex flex-col justify-center w-full text-center items-center px-6 relative z-50'>
+		<div className='flex flex-col justify-center w-full text-center items-center px-6 relative z-10'>
 			<h1 className={`text-white font-[900] ${addStylesTitle}`}>
 				{title}
 			</h1>

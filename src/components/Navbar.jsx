@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx"
 import { Button } from "../UI/Button"
 import { Link } from "react-router-dom"
@@ -6,6 +6,20 @@ import { Link } from "react-router-dom"
 const Navbar = () => {
 	const [open, isOpen] = useState(false)
 	const navigate = ["Buy / Sell", "Grow", "Markets", "Business", "Support"]
+
+	useEffect(() => {
+		const menuScrollBody = () => {
+			open
+				? (document.body.style.overflow = "hidden")
+				: (document.body.style.overflow = "auto")
+		}
+
+		menuScrollBody()
+
+    return () => {
+      document.body.style.overflow = "auto"
+    }
+	}, [open])
 
 	return (
 		<header className='w-[1440px] mx-auto xl2:w-full flex text-white justify-between p-6 items-center relative z-50'>
