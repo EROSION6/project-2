@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Button } from "./Button"
 
 export const Title = ({
@@ -19,7 +20,9 @@ export const Title = ({
 				{info}
 			</p>
 			<Button variant={variant} styles='px-12 py-4 mt-8 sm:mt-4'>
-				{btnTitle} {btnIcon}
+				<Link to='dashboard'>
+					{btnTitle} {btnIcon}
+				</Link>
 			</Button>
 		</div>
 	)

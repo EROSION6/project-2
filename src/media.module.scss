@@ -19,3 +19,14 @@
 		font-size: 1.5rem !important;
 	}
 }
+
+.bgfilters {
+	backdrop-filter: blur(10px);
+}
+
+@media (max-width: 520px) {
+	.grid_card {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+	}
+}

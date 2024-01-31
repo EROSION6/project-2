@@ -35,7 +35,7 @@ const Navbar = () => {
 			<div
 				className={
 					!open
-						? "flex items-center justify-between w-[70%] xl:w-[75%] lg:hidden"
+						? "flex items-center justify-between w-[70%] xl:w-[75%] lg:hidden "
 						: "flex flex-col fixed left-0 top-0 p-10 w-72 bg-black h-screen border-r border-[#4b48486e] rounded-lg z-50"
 				}>
 				<nav
