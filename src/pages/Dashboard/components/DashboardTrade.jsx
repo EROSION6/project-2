@@ -4,7 +4,7 @@ import silver from "../../../assets/Cards/Group 255Silver.svg"
 import platina from "../../../assets/Cards/Hosting.svg"
 import daimond from "../../../assets/Cards/Group 265.svg"
 import legendary from "../../../assets/Cards/Hosting.svg"
-import styles from '../../../media.module.scss'
+import styles from "../../../media.module.scss"
 
 const DashboardTrade = () => {
 	const cards = [
@@ -41,12 +41,14 @@ const DashboardTrade = () => {
 	]
 
 	return (
-		<div className='w-[80rem] h-full flex flex-col justify-center items-center overflow-hidden p-6 rounded-2xl bg-[#1C1C1C] bg-opacity-40 bg-fil xl2:w-full px-6 md:px-3'>
-			<div
-				className={`grid grid-cols-3 gap-7 lg:gap-3 md:grid-cols-2 ${styles.grid_card}`}>
-				{cards.map(card => (
-					<TradeCard key={card.plus} {...card} />
-				))}
+		<div className='w-full h-full flex justify-center'>
+			<div className='w-[80rem] h-full flex flex-col justify-center items-center overflow-hidden p-6 rounded-2xl bg-[#1C1C1C] bg-opacity-40 bg-fil xl2:w-full px-6 md:px-3'>
+				<div
+					className={`grid grid-cols-3 gap-7 lg:gap-3 md:grid-cols-2 ${styles.grid_card}`}>
+					{cards.map(card => (
+						<TradeCard key={card.plus} {...card} />
+					))}
+				</div>
 			</div>
 		</div>
 	)

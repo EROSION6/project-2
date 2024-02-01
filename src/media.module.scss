@@ -30,3 +30,9 @@
 		grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
 	}
 }
+
+@media (max-width: 1280px) {
+	.highcharts-background {
+		width: 100% !important;
+	}
+}

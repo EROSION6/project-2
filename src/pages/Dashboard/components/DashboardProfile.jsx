@@ -23,7 +23,7 @@ const DashboardProfile = () => {
 	]
 
 	return (
-		<>
+		<div className='w-full h-full flex justify-center'>
 			<div
 				className={`w-[45rem] h-[50rem] rounded-2xl bg-[#1C1C1C] bg-opacity-40 bg-fil lg:w-full lg:h-[40rem] px-6 ${styles.bgfilters} md:px-3`}>
 				<form className='w-x-sm mx-auto relative z-20 px-6 flex items-center justify-around h-full sm:flex flex-col sm:w-full md:px-0 md:justify-between py-5'>
@@ -47,7 +47,7 @@ const DashboardProfile = () => {
 					</Button>
 				</form>
 			</div>
-		</>
+		</div>
 	)
 }
 

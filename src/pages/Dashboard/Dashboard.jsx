@@ -12,7 +12,7 @@ const Dashboard = () => {
 				<Sidebar open={open} isOpen={isOpen} />
 				<div className='w-full flex flex-col '>
 					<HeaderDashboard open={open} isOpen={isOpen} />
-					<div className='w-full h-full flex justify-center px-5'>
+					<div className='w-full h-full px-5'>
 						<Outlet />
 					</div>
 				</div>

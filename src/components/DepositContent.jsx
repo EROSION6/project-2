@@ -26,7 +26,7 @@ const DepositContent = () => {
 		<div className='w-full h-full py-10 flex flex-col justify-between relative'>
 			<select
 				id='countries'
-				className='w-full p-6 rounded-xl bg-[#4444446b] outline-none text-white text-base text-[600] uppercase flex'>
+				className='w-full p-6 rounded-xl bg-[#4444446b] outline-none text-white text-base text-[600] uppercase flex smy:py-4'>
 				<option selected>btc</option>
 				{options.map(opt => (
 					<option key={opt} value={opt}>
@@ -45,7 +45,7 @@ const DepositContent = () => {
 				<div className='w-full flex flex-col items-center'>
 					<label
 						htmlFor='input-copy'
-						className='w-full p-6 rounded-xl bg-[#4444446b] flex justify-between items-center'>
+						className='w-full p-6 rounded-xl bg-[#4444446b] flex justify-between items-center smy:py-4'>
 						<span>
 							<b className='text-2xl text-white font-[500] lg:text-base sm:hidden'>
 								283h976qwe9ry25r817gf31f4fk17f9gEIskfeFskgfje34

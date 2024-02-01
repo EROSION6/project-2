@@ -32,10 +32,10 @@ const DonateContent = () => {
 				))}
 			</select>
 			<div className='w-full h-full flex flex-col'>
-				<div className='mb-8'>
+				<div className='mb-3'>
 					<Input
 						type='text'
-						styles='w-full py-5'
+						styles='w-full py-5 smy:py-3'
 						variant='input-dashboard'
 						placeholder='With drawal Address'
 					/>
@@ -45,7 +45,7 @@ const DonateContent = () => {
 						type='number'
 						value={value}
 						onChange={e => setValue(e.target.value)}
-						styles='w-full py-5'
+						styles='w-full py-5 smy:py-3'
 						variant='input-dashboard'
 						placeholder='with drawal amount'
 					/>
@@ -59,10 +59,10 @@ const DonateContent = () => {
 			</div>
 			<div>
 				<div className='flex justify-center mb-8 space-x-5 sm:flex-col sm:space-x-0'>
-					<Link to='' className='text-white text-xl font-[500]'>
+					<Link to='' className='text-white text-xl font-[500] sm:text-lg'>
 						Fee: 0.003 BTC
 					</Link>
-					<Link to='' className='text-white text-xl font-[500]'>
+					<Link to='' className='text-white text-xl font-[500] sm:text-lg'>
 						you receive: 0.017 BTC
 					</Link>
 				</div>
