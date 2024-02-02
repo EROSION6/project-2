@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { tables } from "../pages/Home/date"
 import { FaArrowRight } from "react-icons/fa"
 
@@ -30,11 +31,19 @@ const Table = () => {
 								{table.percent}%
 							</td>
 							<td className='px-6 py-4 lg:py-4 lg:px-4'>$2999</td>
-							<td className='px-6 py-4 text-white text-base font-[600] flex items-center gap-1 cursor-pointer lg:py-4 lg:px-4 md:text-sm smx:hidden'>
-								Trade Now <FaArrowRight />
+							<td className='px-6 py-4 text-white text-base font-[600]  cursor-pointer lg:py-4 lg:px-4 md:text-sm smx:hidden'>
+								<Link
+									to='dashboard/trade'
+									className='flex items-center gap-1'>
+									Trade Now <FaArrowRight />
+								</Link>
 							</td>
 							<td className='px-6 py-4 text-white text-base hidden font-[600] cursor-pointer lg:py-4 lg:px-4 md:text-sm smx:flex items-center gap-1'>
-								Go <FaArrowRight className='smx:w-2 h-2' />
+								<Link
+									to='dashboard/trade'
+									className='flex items-center gap-1'>
+									Go <FaArrowRight className='smx:w-2 h-2' />
+								</Link>
 							</td>
 						</tr>
 					))}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Button } from "../UI/Button"
 import star from "../assets/star-img.svg"
 
@@ -27,7 +28,7 @@ const Platform = () => {
 						eiusmod tempos Lorem ipsum dolor sit amet, consectetur
 					</p>
 					<Button styles='mt-6' variant='btn-border'>
-						Get Started
+						<Link to='dashboard/dashboard'>Get Started</Link>
 					</Button>
 				</div>
 			</article>

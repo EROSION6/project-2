@@ -1,5 +1,6 @@
 import { FaArrowRight } from "react-icons/fa"
 import { Button } from "../UI/Button"
+import { Link } from "react-router-dom"
 
 const Card = ({ title, imageUrl }) => {
 	return (
@@ -17,9 +18,12 @@ const Card = ({ title, imageUrl }) => {
 			<footer className='mt-8'>
 				<Button
 					variant='btn-not-bg'
-					className='text-[#B982FF] text-base font-[600] flex items-center gap-1'>
-					Get Started{" "}
-					<FaArrowRight className='text-[#B982FF]' />
+					className='text-[#B982FF] text-base font-[600] '>
+					<Link
+						to='dashboard/dashboard'
+						className='flex items-center gap-1'>
+						Get Started <FaArrowRight className='text-[#B982FF]' />
+					</Link>
 				</Button>
 			</footer>
 		</article>

@@ -20,7 +20,7 @@ export const Title = ({
 				{info}
 			</p>
 			<Button variant={variant} styles='px-12 py-4 mt-8 sm:mt-4'>
-				<Link to='dashboard'>
+				<Link className='flex items-center gap-1' to='dashboard/dashboard'>
 					{btnTitle} {btnIcon}
 				</Link>
 			</Button>

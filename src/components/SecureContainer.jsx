@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Button } from "../UI/Button"
 import star from "../assets/star-imgstar2.svg"
 import star2 from "../assets/star-imgstar3.svg"
@@ -25,7 +26,7 @@ const SecureContainer = () => {
 					elit, sed do eiusmod tempos
 				</p>
 				<Button styles='mt-6' variant='btn-bg'>
-					Get Started
+					<Link to='dashboard/dashboard'>Get Started</Link>
 				</Button>
 			</div>
 			<div className='w-[420px] h-[335px] relative flex items-center md:flex justify-center md:w-full'>

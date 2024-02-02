@@ -51,7 +51,6 @@ export const options = {
 	],
 }
 
-
 export const progress = [
 	{
 		title: "Bitcoin",
@@ -88,4 +87,13 @@ export const progress = [
 		number: "3",
 		procent: "7",
 	},
+]
+
+export const titleTable = ["Name", "Balance", "Profit", "Action"]
+
+export const meaning = [
+	{ name: "btc", balance: 1, profit: "0.003" },
+	{ name: "etn", balance: 2, profit: "0.005" },
+	{ name: "xrp", balance: 3, profit: "0.009" },
+	{ name: "aba", balance: 4, profit: "0.003" },
 ]
