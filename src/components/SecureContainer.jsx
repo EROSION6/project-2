@@ -2,8 +2,10 @@ import { Link } from "react-router-dom"
 import { Button } from "../UI/Button"
 import star from "../assets/star-imgstar2.svg"
 import star2 from "../assets/star-imgstar3.svg"
+import { useSelector } from "react-redux"
 
 const SecureContainer = () => {
+	const { users } = useSelector(state => state.users)
 	return (
 		<article className='w-full flex gap-5 mt-40 h-full justify-center px-6 relative z-20 md:flex-col-reverse'>
 			<img
@@ -26,7 +28,9 @@ const SecureContainer = () => {
 					elit, sed do eiusmod tempos
 				</p>
 				<Button styles='mt-6' variant='btn-bg'>
-					<Link to='dashboard/dashboard'>Get Started</Link>
+					<Link to={users ? "dashboard/dashboard" : "register"}>
+						Get Started
+					</Link>
 				</Button>
 			</div>
 			<div className='w-[420px] h-[335px] relative flex items-center md:flex justify-center md:w-full'>

@@ -7,7 +7,7 @@ import Table from "../../components/Table"
 import SecureContainer from "../../components/SecureContainer"
 import SectionInfo1 from "../../components/SectionInfo1"
 import ContentHomeFooter from "./components/ContentHomeFooter"
-import Navbar from "../../components/Navbar"
+import Navbar from "../../components/Navbar/Navbar"
 import Footer from "../../components/Footer/Footer"
 
 const Home = () => {

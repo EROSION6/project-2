@@ -25,9 +25,7 @@ const DashboardChart = () => {
 					</div>
 				</div>
 			</div>
-			<div className=''>
-				<Table />
-			</div>
+			<Table />
 		</div>
 	)
 }

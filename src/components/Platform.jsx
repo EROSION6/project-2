@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
 import { Button } from "../UI/Button"
 import star from "../assets/star-img.svg"
+import { useSelector } from "react-redux"
 
 const Platform = () => {
+	const { users } = useSelector(state => state.users)
+
 	return (
 		<>
 			<article className='w-full flex gap-5 mt-40 h-full justify-center px-6 relative z-10 md:flex-col'>
@@ -28,7 +31,9 @@ const Platform = () => {
 						eiusmod tempos Lorem ipsum dolor sit amet, consectetur
 					</p>
 					<Button styles='mt-6' variant='btn-border'>
-						<Link to='dashboard/dashboard'>Get Started</Link>
+						<Link to={users ? "dashboard/dashboard" : "register"}>
+							Get Started
+						</Link>
 					</Button>
 				</div>
 			</article>

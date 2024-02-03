@@ -3,12 +3,18 @@ import { Button } from "../../../UI/Button"
 import styles from "../../../media.module.scss"
 import avatar from "../../../assets/Ellipse 1.svg"
 import { Forms } from "../../../UI/Forms"
+import { useDispatch, useSelector } from "react-redux"
+import { logout } from "../../../Redux/reducer/sliceUser"
+import { useNavigate } from "react-router-dom"
 
 const DashboardProfile = () => {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [btcAddress, setBtcAddress] = useState("")
 	const [etnAddress, setEtnAddress] = useState("")
+	const { users } = useSelector(state => state.users)
+	const dispatch = useDispatch()
+	const navigate = useNavigate()
 
 	const onChangeEmail = e => setEmail(e.target.value)
 	const onChangePassword = e => setPassword(e.target.value)
@@ -21,6 +27,12 @@ const DashboardProfile = () => {
 		{ title: "BTC Address", value: btcAddress, onChange: onChangeBtc },
 		{ title: "ETH Address", value: etnAddress, onChange: onChangeEnt },
 	]
+
+	const onClickBtnLogout = e => {
+		e.preventDefault
+		dispatch(logout())
+		navigate("/")
+	}
 
 	return (
 		<div className='w-full h-full flex justify-center'>
@@ -35,15 +47,20 @@ const DashboardProfile = () => {
 								className='w-20 h-20 rounded-lg lg:w-12 lg:h-12'
 							/>
 						</span>
-						<h4 className='text-white text-2xl font-[600]'>Evano</h4>
+						<h4 className='text-white text-2xl font-[600]'>
+							{users.email}
+						</h4>
 					</div>
 					<div className='w-full'>
 						{formsObject.map(form => (
 							<Forms key={form.title} {...form} />
 						))}
 					</div>
-					<Button variant='btn-bg' styles='w-full'>
-						Save
+					<Button
+						onClick={onClickBtnLogout}
+						variant='btn-bg'
+						styles='w-full'>
+						Logout
 					</Button>
 				</form>
 			</div>

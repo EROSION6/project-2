@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx"
-import { Button } from "../UI/Button"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
+import { Left } from "./Left"
 
 const Navbar = () => {
 	const [open, isOpen] = useState(false)
@@ -22,7 +23,11 @@ const Navbar = () => {
 	}, [open])
 
 	return (
-		<header className='w-[1440px] mx-auto xl2:w-full flex text-white justify-between p-6 items-center relative z-50'>
+		<motion.header
+			initial={{ top: -100 }}
+			animate={{ top: 0 }}
+			transition={{ duration: 0.2, ease: "linear" }}
+			className='w-[1440px] mx-auto xl2:w-full flex text-white justify-between p-6 items-center relative z-50'>
 			<div className='relative'>
 				<h2 className='flex items-center gap-2 text-2xl font-[600] text-white'>
 					<img
@@ -49,18 +54,8 @@ const Navbar = () => {
 						</Link>
 					))}
 				</nav>
-				<div
-					className={
-						!open
-							? "flex space-x-5"
-							: "flex flex-col space-y-3 mt-5 items-start"
-					}>
-					<Button variant='btn-border'>
-						<Link to='login'>Sign In</Link>
-					</Button>
-					<Button variant='btn-bg'>
-						<Link to='register'>Sign up</Link>
-					</Button>
+				<div>
+					<Left open={open} />
 				</div>
 				<span
 					onClick={() => isOpen(false)}
@@ -71,7 +66,7 @@ const Navbar = () => {
 			<div onClick={() => isOpen(!open)} className='hidden lg:block'>
 				<RxHamburgerMenu className='w-8 h-8' />
 			</div>
-		</header>
+		</motion.header>
 	)
 }
 

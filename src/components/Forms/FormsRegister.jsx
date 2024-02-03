@@ -1,18 +1,48 @@
 import { useState } from "react"
-import star from "../assets/star-imgstar2.svg"
-import bubble from "../assets/Bubble.svg"
-import { Input } from "../UI/Input"
-import { Link } from "react-router-dom"
-import { Button } from "../UI/Button"
+import star from "../../assets/star-imgstar2.svg"
+import bubble from "../../assets/Bubble.svg"
+import { Input } from "../../UI/Input"
+import { Link, useNavigate } from "react-router-dom"
+import { Button } from "../../UI/Button"
+import { useDispatch } from "react-redux"
+import { Form } from "../../UI/Form"
+import { register } from "../../Redux/reducer/sliceUser"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import { nanoid } from "@reduxjs/toolkit"
 
 const FormsRegister = () => {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [confirmPassword, setConfirmPassword] = useState("")
+	const dispatch = useDispatch()
+	const navigate = useNavigate()
+	const notify = () => toast.error("you did not fill in all fields")
 
 	const onChangeEmail = e => setEmail(e.target.value)
 	const onChangePassword = e => setPassword(e.target.value)
 	const onChangeConfirmPassword = e => setConfirmPassword(e.target.value)
+
+	const addUserRegister = e => {
+		e.preventDefault()
+		if (email === "" || password === "" || confirmPassword === "") {
+			notify()
+		} else {
+			dispatch(
+				register({
+					id: nanoid(),
+					email,
+					password,
+					confirmPassword,
+					loggedIn: true,
+				}),
+			)
+			navigate("/")
+		}
+		setEmail("")
+		setPassword("")
+		setConfirmPassword("")
+	}
 
 	return (
 		<>
@@ -31,32 +61,16 @@ const FormsRegister = () => {
 						Crypto
 					</h2>
 				</Link>
-				<div className='mb-5'>
-					<label className='block mb-3 text-white text-xl font-[600]'>
-						Email
-					</label>
-					<Input
-						variant='input-blue'
-						type='email'
-						value={email}
-						onChange={onChangeEmail}
-						placeholder='name@flowbite.com'
-						required
-					/>
-				</div>
-				<div className='mb-5'>
-					<label className='block mb-3 text-white text-xl font-[600]'>
-						Password
-					</label>
-					<Input
-						variant='input-blue'
-						type='password'
-						value={password}
-						onChange={onChangePassword}
-						placeholder='password...'
-						required
-					/>
-				</div>
+				<Form
+					value={email}
+					onChange={onChangeEmail}
+					placeholder='long@mail.ru'
+				/>
+				<Form
+					value={password}
+					onChange={onChangePassword}
+					placeholder='12345...'
+				/>
 				<div className='mb-5 flex flex-col'>
 					<label className='block mb-3 text-white text-xl font-[600]'>
 						Confirm Password
@@ -89,9 +103,10 @@ const FormsRegister = () => {
 						</Link>
 					</div>
 				</div>
-				<Button variant='btn-bg' type='submit'>
+				<Button onClick={addUserRegister} variant='btn-bg' type='submit'>
 					Sign in
 				</Button>
+				<ToastContainer />
 			</form>
 			<img src={bubble} alt='bubble' className='absolute sm:f-full' />
 		</>

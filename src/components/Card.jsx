@@ -1,8 +1,10 @@
 import { FaArrowRight } from "react-icons/fa"
 import { Button } from "../UI/Button"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 const Card = ({ title, imageUrl }) => {
+	const { users } = useSelector(state => state.users)
 	return (
 		<article className='w-96 p-6 flex flex-col items-center bg-[#1A1B23] rounded-3xl md:w-full'>
 			<div>
@@ -20,7 +22,7 @@ const Card = ({ title, imageUrl }) => {
 					variant='btn-not-bg'
 					className='text-[#B982FF] text-base font-[600] '>
 					<Link
-						to='dashboard/dashboard'
+						to={users ? "dashboard/dashboard" : "register"}
 						className='flex items-center gap-1'>
 						Get Started <FaArrowRight className='text-[#B982FF]' />
 					</Link>
