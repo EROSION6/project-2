@@ -17,7 +17,7 @@ const HeaderDashboard = ({ open, isOpen }) => {
 				</div>
 				<div>
 					<Link to='profile' className='flex items-center space-x-4'>
-						<span className='text-white text-lg font-[500]'>
+						<span className='text-white text-lg font-[500] md:text-sm'>
 							{users.email}
 						</span>
 						<span>
