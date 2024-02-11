@@ -1,4 +1,4 @@
-import DonateContent from "../../../components/DonateContent"
+import DonateContent from "../../../components/Dashboard/DonateContent"
 
 const DashboardDonate = () => {
 	return (

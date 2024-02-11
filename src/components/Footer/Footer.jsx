@@ -1,4 +1,4 @@
-import { Input } from "../../UI/Input"
+import { Input } from "../../UI/index"
 import { Right } from "./Right"
 import { Left } from "./Left"
 import "react-toastify/dist/ReactToastify.css"

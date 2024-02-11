@@ -1,8 +1,7 @@
-import { Input } from "../UI/Input"
-import { options } from "./DepositContent"
-import { Button } from "../UI/Button"
-import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Button, Input } from '../../UI/index'
+import { options } from './DepositContent'
 
 const DonateContent = () => {
 	const [value, setValue] = useState(1)
@@ -23,7 +22,8 @@ const DonateContent = () => {
 		<div className='w-full h-full py-10 flex flex-col relative gap-10'>
 			<select
 				id='countries'
-				className='w-full p-6 rounded-xl bg-[#4444446b] outline-none text-white text-base text-[600] uppercase flex'>
+				className='w-full p-6 rounded-xl bg-[#4444446b] outline-none text-white text-base text-[600] uppercase flex'
+			>
 				<option selected>btc</option>
 				{options.map(opt => (
 					<option key={opt} value={opt}>

@@ -5,7 +5,7 @@ import {
 	default as platina,
 } from '../../../assets/Cards/Hosting.svg'
 import bronza from '../../../assets/Cards/Server.svg'
-import TradeCard from '../../../components/TradeCard'
+import TradeCard from '../../../components/Dashboard/TradeCard'
 import styles from '../../../media.module.scss'
 
 const cards = [

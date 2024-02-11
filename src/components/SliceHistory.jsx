@@ -1,5 +1,5 @@
 import { FaArrowRight } from "react-icons/fa"
-import { Title } from "../UI/Title"
+import { Title } from "../UI/index"
 import styles from "../media.module.scss"
 
 const SliceHistory = () => {

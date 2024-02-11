@@ -1,5 +1,5 @@
 import { FaArrowRight } from "react-icons/fa"
-import { Button } from "../UI/Button"
+import { Button } from "../UI/index"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 

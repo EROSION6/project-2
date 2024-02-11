@@ -1,7 +1,7 @@
-import { RxHamburgerMenu } from "react-icons/rx"
-import avatar from "../assets/Ellipse 1.svg"
-import { Link } from "react-router-dom"
-import { useSelector } from "react-redux"
+import { RxHamburgerMenu } from 'react-icons/rx'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import avatar from '../../assets/Ellipse 1.svg'
 
 const HeaderDashboard = ({ open, isOpen }) => {
 	const { users } = useSelector(state => state.users)

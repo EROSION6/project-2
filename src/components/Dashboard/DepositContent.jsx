@@ -1,17 +1,17 @@
-import { useState } from "react"
-import { ToastContainer, toast } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
-import { FaRegCopy } from "react-icons/fa"
-import Rectangle from "../assets/Rectangle 39232.png"
-import { Button } from "../UI/Button"
+import { useState } from 'react'
+import { FaRegCopy } from 'react-icons/fa'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { Button } from '../../UI/index'
+import Rectangle from '../../assets/Rectangle 39232.png'
 
 const DepositContent = () => {
 	const [copyValue, setCopyValue] = useState(
-		"283h976qwe9ry25r817gf31f4fk17f9gEIskfeFskgfje34",
+		'283h976qwe9ry25r817gf31f4fk17f9gEIskfeFskgfje34'
 	)
 	const notify = () =>
-		toast.success("You copied", {
-			position: "top-right",
+		toast.success('You copied', {
+			position: 'top-right',
 			autoClose: 5000,
 		})
 
@@ -26,7 +26,8 @@ const DepositContent = () => {
 		<div className='w-full h-full py-10 flex flex-col justify-between relative'>
 			<select
 				id='countries'
-				className='w-full p-6 rounded-xl bg-[#4444446b] outline-none text-white text-base text-[600] uppercase flex smy:py-4'>
+				className='w-full p-6 rounded-xl bg-[#4444446b] outline-none text-white text-base text-[600] uppercase flex smy:py-4'
+			>
 				<option selected>btc</option>
 				{options.map(opt => (
 					<option key={opt} value={opt}>
@@ -45,7 +46,8 @@ const DepositContent = () => {
 				<div className='w-full flex flex-col items-center'>
 					<label
 						htmlFor='input-copy'
-						className='w-full p-6 rounded-xl bg-[#4444446b] flex justify-between items-center smy:py-4'>
+						className='w-full p-6 rounded-xl bg-[#4444446b] flex justify-between items-center smy:py-4'
+					>
 						<span>
 							<b className='text-2xl text-white font-[500] lg:text-base sm:hidden'>
 								283h976qwe9ry25r817gf31f4fk17f9gEIskfeFskgfje34
@@ -59,9 +61,9 @@ const DepositContent = () => {
 					<input type='text' id='input' className='hidden' />
 					<div className='flex flex-col items-center mt-7 space-y-4'>
 						<p className='text-base text-[#898CA9] text-center font-[400] w-[30rem] sm:w-full sm:text-sm'>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							Enim a fugit repudiandae inventore, cumque voluptatem harum
-							omnis debitis.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim a
+							fugit repudiandae inventore, cumque voluptatem harum omnis
+							debitis.
 						</p>
 						<Button variant='btn-bg'>PLEACE WHITDRAWAL</Button>
 					</div>
@@ -73,4 +75,4 @@ const DepositContent = () => {
 
 export default DepositContent
 
-export const options = ["btc", "btc", "btc", "btc", "btc"]
+export const options = ['btc', 'btc', 'btc', 'btc', 'btc']

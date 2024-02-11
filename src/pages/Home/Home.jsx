@@ -1,4 +1,4 @@
-import { Title } from "../../UI/Title"
+import { Title } from "../../UI/index"
 import Platform from "../../components/Platform"
 import styles from "../../media.module.scss"
 import star1 from "../../assets/star-img.svg"

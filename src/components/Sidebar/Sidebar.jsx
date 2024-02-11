@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom"
-import { navigation } from "./date"
-import logout from "../../assets/logout-1 1.svg"
+import { Link } from 'react-router-dom'
+import { navigation } from './data'
 
 export const Sidebar = ({ open }) => {
 	return (
@@ -8,9 +7,10 @@ export const Sidebar = ({ open }) => {
 			<div
 				className={
 					!open
-						? "flex flex-row bg-transparent fixed left-0 z-50 translate-x-[-100%] ease-linear duration-200"
-						: "translate-x-[0%] ease-linear duration-200"
-				}>
+						? 'flex flex-row bg-transparent fixed left-0 z-50 translate-x-[-100%] ease-linear duration-200'
+						: 'translate-x-[0%] ease-linear duration-200'
+				}
+			>
 				<div className='flex flex-col min-h-screen w-56 bg-transparent rounded-r-3xl overflow-hidden border-r border-[#1C1C1C] h-full justify-between md:w-24'>
 					<div className='flex flex-col'>
 						<div className='flex items-center justify-center h-20 shadow-md md:justify-center'>
@@ -31,7 +31,8 @@ export const Sidebar = ({ open }) => {
 								<li key={link.title}>
 									<Link
 										to={link.href}
-										className='flex flex-row items-center h-16 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 p-9'>
+										className='flex flex-row items-center h-16 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 p-9'
+									>
 										<span className='inline-flex items-center justify-center w-12 text-lg text-gray-400 md:w-auto'>
 											<img src={link.icon} className='h-6 w-7' />
 										</span>
@@ -43,16 +44,6 @@ export const Sidebar = ({ open }) => {
 							))}
 						</ul>
 					</div>
-					<footer className='flex justify-center -mt-12 relative'>
-						<Link className='absolute bottom-12 flex items-center space-x-3'>
-							<span>
-								<img src={logout} alt='logout' />
-							</span>
-							<span className='text-white text-xl font-[400] hover:text-red-400 duration-300 ease-out md:hidden'>
-								Log Out
-							</span>
-						</Link>
-					</footer>
 				</div>
 			</div>
 		</>

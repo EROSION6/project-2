@@ -1,4 +1,4 @@
-import { meaning, titleTable } from "./date"
+import { meaning, titleTable } from "./data"
 
 const Table = () => {
 	return (

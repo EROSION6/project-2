@@ -1,8 +1,8 @@
 import Highcharts from "highcharts"
 import HighchartsReact from "highcharts-react-official"
 import Splendings from "./Splendings"
-import { Button } from "../../UI/Button"
-import { options, progress } from "./date"
+import { Button } from "../../UI/index"
+import { options, progress } from "./data"
 import "../../media.module.scss"
 import Table from "./Table"
 

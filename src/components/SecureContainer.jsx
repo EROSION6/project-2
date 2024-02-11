@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Button } from "../UI/Button"
+import { Button } from "../UI/index"
 import star from "../assets/star-imgstar2.svg"
 import star2 from "../assets/star-imgstar3.svg"
 import { useSelector } from "react-redux"

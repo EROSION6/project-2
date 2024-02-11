@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { tables } from "../pages/Home/date"
+import { tables } from "../pages/Home/data"
 import { FaArrowRight } from "react-icons/fa"
 import { useSelector } from "react-redux"
 

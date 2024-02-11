@@ -1,4 +1,4 @@
-import { Input } from "../UI/Input"
+import { Input } from '../Input/Input'
 
 export const Forms = ({ title, value, onChange, ...props }) => {
 	return (

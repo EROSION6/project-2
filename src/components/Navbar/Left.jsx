@@ -1,4 +1,4 @@
-import { Button } from "../../UI/Button"
+import { Button } from "../../UI/index"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import avatar from "../../assets/Ellipse 1.svg"

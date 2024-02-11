@@ -1,4 +1,4 @@
-import DepositContent from "../../../components/DepositContent"
+import DepositContent from "../../../components/Dashboard/DepositContent"
 
 const DashboardProtocols = () => {
 	return (

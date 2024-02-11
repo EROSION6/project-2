@@ -1,9 +1,9 @@
-import { cards } from "../pages/Home/date"
-import Card from "./Card"
-import { Title } from "../UI/Title"
-import star2 from "../assets/star-imgstar2.svg"
-import styles from "../media.module.scss"
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
+import { Title } from '../UI/index'
+import star2 from '../assets/star-imgstar2.svg'
+import styles from '../media.module.scss'
+import { cards } from '../pages/Home/data'
+import Card from './Card'
 
 const SectionInfo1 = () => {
 	return (
@@ -13,7 +13,8 @@ const SectionInfo1 = () => {
 				<motion.div
 					initial={{ y: -500 }}
 					animate={{ y: 0 }}
-					transition={{ duration: 0.4, ease: "linear" }}>
+					transition={{ duration: 0.4, ease: 'linear' }}
+				>
 					<Title
 						title='We make crypto clear and simple'
 						addStylesTitle={`font-[900] text-8xl xl:text-6xl text-center w-[90%] ${styles.title}`}

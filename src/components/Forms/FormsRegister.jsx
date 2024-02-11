@@ -1,23 +1,21 @@
-import { useState } from "react"
-import star from "../../assets/star-imgstar2.svg"
-import bubble from "../../assets/Bubble.svg"
-import { Input } from "../../UI/Input"
-import { Link, useNavigate } from "react-router-dom"
-import { Button } from "../../UI/Button"
-import { useDispatch } from "react-redux"
-import { Form } from "../../UI/Form"
-import { register } from "../../Redux/reducer/sliceUser"
-import { ToastContainer, toast } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
-import { nanoid } from "@reduxjs/toolkit"
+import { nanoid } from '@reduxjs/toolkit'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { register } from '../../Redux/reducer/sliceUser'
+import { Button, Form, Input } from '../../UI/index'
+import bubble from '../../assets/Bubble.svg'
+import star from '../../assets/star-imgstar2.svg'
 
 const FormsRegister = () => {
-	const [email, setEmail] = useState("")
-	const [password, setPassword] = useState("")
-	const [confirmPassword, setConfirmPassword] = useState("")
+	const [email, setEmail] = useState('')
+	const [password, setPassword] = useState('')
+	const [confirmPassword, setConfirmPassword] = useState('')
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
-	const notify = () => toast.error("you did not fill in all fields")
+	const notify = () => toast.error('you did not fill in all fields')
 
 	const onChangeEmail = e => setEmail(e.target.value)
 	const onChangePassword = e => setPassword(e.target.value)
@@ -25,7 +23,7 @@ const FormsRegister = () => {
 
 	const addUserRegister = e => {
 		e.preventDefault()
-		if (email === "" || password === "" || confirmPassword === "") {
+		if (email === '' || password === '' || confirmPassword === '') {
 			notify()
 		} else {
 			dispatch(
@@ -35,13 +33,13 @@ const FormsRegister = () => {
 					password,
 					confirmPassword,
 					loggedIn: true,
-				}),
+				})
 			)
-			navigate("/")
+			navigate('/')
 		}
-		setEmail("")
-		setPassword("")
-		setConfirmPassword("")
+		setEmail('')
+		setPassword('')
+		setConfirmPassword('')
 	}
 
 	return (
@@ -92,13 +90,12 @@ const FormsRegister = () => {
 							/>
 							<label
 								htmlFor='link-checkbox'
-								className='ms-2 text-[#898CA9] text-sm font-[600]'>
+								className='ms-2 text-[#898CA9] text-sm font-[600]'
+							>
 								Save Email and Password
 							</label>
 						</div>
-						<Link
-							to='register'
-							className='text-[#898CA9]  text-sm font-[600]'>
+						<Link to='register' className='text-[#898CA9]  text-sm font-[600]'>
 							Don’t have an account?
 						</Link>
 					</div>
